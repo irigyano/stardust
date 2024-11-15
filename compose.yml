@@ -1,0 +1,27 @@
+services:
+  # python:
+  #   build:
+  #     context: ./python
+  #   container_name: fastapi-app
+  #   volumes:
+  #     - ./output:/app/src/mnt
+  #   # environment:
+  #   #   - DEBUG=1
+  #   #   - API_KEY=${API_KEY}
+  #   restart: unless-stopped
+  #   # healthcheck:
+  #   #   test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+  #   #   interval: 30s
+  #   #   timeout: 10s
+  #   #   retries: 3
+  #   # networks:
+  #   #   - app-network
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx-container
+    ports:
+      - "5350:80"
+# networks:
+#   app-network:
+#     driver: bridge
