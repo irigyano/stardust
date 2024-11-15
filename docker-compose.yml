@@ -7,7 +7,7 @@ services:
     ports:
       - "5350:5350"
     volumes:
-      - /home/cytek/usagi:/app/src/mnt
+      - ./output:/app/src/mnt
     # environment:
     #   - DEBUG=1
     #   - API_KEY=${API_KEY}
