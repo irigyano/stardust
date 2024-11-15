@@ -44,3 +44,9 @@ def read_files():
     files = list_files_in_directory(dest)
 
     return {"files": files}
+
+
+@app.get("/health", status_code=200)
+def health():
+    print('health checked')
+    return {}
